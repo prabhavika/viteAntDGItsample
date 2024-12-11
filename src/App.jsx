@@ -23,6 +23,9 @@ function App() {
         />
       </div>
       <div>
+        <Button type="Primary">New Feature for Branch</Button>
+      </div>
+      <div>
         <Button type="dashed">Button</Button>
         <p>{import.meta.env.VITE_SAMPLE_KEY} </p>
       </div>
