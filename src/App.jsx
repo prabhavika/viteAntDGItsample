@@ -23,10 +23,21 @@ function App() {
         />
       </div>
       <div>
-        <Button type="Primary">New Feature for Branch</Button>
-      </div>
-      <div>
-        <Button type="dashed">Button</Button>
+        <Button
+          type="dashed"
+          onClick={() => (
+            <>
+              <Alert
+                message="Warning Alert box from Ant Design"
+                type="warning"
+                closable
+                onClose={onClose}
+              />
+            </>
+          )}
+        >
+          Button
+        </Button>
         <p>{import.meta.env.VITE_SAMPLE_KEY} </p>
       </div>
       <div>
