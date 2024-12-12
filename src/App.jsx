@@ -3,16 +3,25 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import React from "react";
-import { Button } from "antd";
+import { Button, Alert } from "antd";
 import { FloatButton } from "antd";
 import { QuestionCircleOutlined } from "@ant-design/icons";
 
 function App() {
   const [count, setCount] = useState(0);
+  const onClose = (e) => {
+    console.log(e, "I was closed.");
+  };
 
   return (
     <>
       <div>
+        <Alert
+          message="Success alert!"
+          type="success"
+          closable
+          onClose={onClose}
+        />
         <FloatButton
           onClick={() => console.log("On Click!")}
           icon={<QuestionCircleOutlined />}
@@ -23,21 +32,8 @@ function App() {
         />
       </div>
       <div>
-        <Button
-          type="dashed"
-          onClick={() => (
-            <>
-              <Alert
-                message="Warning Alert box from Ant Design"
-                type="warning"
-                closable
-                onClose={onClose}
-              />
-            </>
-          )}
-        >
-          Button
-        </Button>
+        <h2>This is a h2 heading!</h2>
+        <Button type="dashed">Button</Button>
         <p>{import.meta.env.VITE_SAMPLE_KEY} </p>
       </div>
       <div>
